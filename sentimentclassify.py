@@ -11,7 +11,7 @@ from tensorflow.keras.applications import MobileNet
 from tensorflow.keras.applications.mobilenet import preprocess_input
 
 st.set_page_config(
-    page_title="SASM",
+    page_title="VLP",
     initial_sidebar_state="expanded",
 )
 
@@ -23,7 +23,7 @@ footer {visibility: hidden;}
 
 uploaded_file = None
 
-st.title("Sentiment Analysis on Social Media")
+st.title("Vitality Lung Predictor")
 
 st.write('<style>div.row-widget.stMarkdown { font-size: 24px; }</style>', unsafe_allow_html=True)
 
@@ -32,7 +32,7 @@ uploaded_file = st.file_uploader("Choose a File", type=['jpg','png','jpeg'])
 
 if uploaded_file!=None:
     st.image(uploaded_file)
-x = st.button("classify")
+x = st.button("Predict")
 if x:
     with st.spinner("Diagnosing...."):
         model = load_model('models/LCC.h5', compile = False)

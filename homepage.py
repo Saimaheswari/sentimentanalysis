@@ -32,7 +32,7 @@ components.html(
             font-size: 2rem;
         }
     </style>
-    <p id="effect">Lung Cancer Detection</p>
+    <p id="effect">Sentiment Analysis on Social Media</p>
     """,
     height=69,
 )
